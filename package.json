@@ -1,0 +1,14 @@
+{
+  "name": "reply-testtask",
+  "version": "1.0.0",
+  "description": "test task for reply canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Naumenko",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.5.1"
+  }
+}
