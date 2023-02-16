@@ -51,6 +51,7 @@ describe('Scenario 1 – Create contact', () => {
       cy.get('#DetailForm_save-label').click();
 
       cy.wait('@save').then((xhr) => {
+        //TODO - change to sharing context .as
         recordID = xhr.response.body.match(/record=([^&]*)&/)[1];
       }).its('response.statusCode').should('eq', 200);
     });
@@ -59,8 +60,7 @@ describe('Scenario 1 – Create contact', () => {
     it('check contact', () => {
       cy.visit('/?module=Contacts&action=index')
 
-      cy.get('#filter_text').type('Name Surname')
-      cy.contains('Name Surname').click()
+      cy.findByFilterText('Name Surname')
 
       cy.get('#_form_header > h3').contains('Name Surname')
       cy.get('.cell-business_role > .form-entry > .form-value').contains('CEO')

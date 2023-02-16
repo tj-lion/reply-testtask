@@ -13,6 +13,11 @@ Cypress.Commands.add('login', () => {
     });
 })
 
+Cypress.Commands.add('findByFilterText', (text) => {
+    cy.get('#filter_text').type(text)
+    cy.contains(text).click()
+})
+
 Cypress.Commands.overwrite('type', (fn, subject, text, options = {}) => {
     options.delay = options.delay || 0;
     return fn(subject, text, options);
