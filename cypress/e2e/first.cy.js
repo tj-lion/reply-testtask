@@ -68,9 +68,9 @@ describe("Scenario 1 – Create contact", () => {
     it("check contact", () => {
       cy.visit(constants.urls.contactsView);
 
-      cy.findByFilterText(name + surname);
+      cy.findByFilterText(name + ' ' + surname);
 
-      cy.get("#_form_header > h3").contains(name + surname);
+      cy.get("#_form_header > h3").contains(name + ' ' + surname);
       cy.get(".cell-business_role > .form-entry > .form-value").contains("CEO");
       cy.xpath('//p [contains( text(), "Category")]/parent::li').contains(
         "Customers, Suppliers"
