@@ -1,18 +1,21 @@
 {
   "globals": {
-    "expect" : true,
-    "browser": true,
-    "$": true,
-    "$$": true
+    "cy" : true,
+    "it": true,
+    "describe": true,
+    "context": true,
+    "beforeEach": true,
+    "before": true,
+    "Cypress": true,
+    "window": true
   },
   "env": {
     "es2021": true,
     "node": true
-
   },
   "extends": [
     "eslint:recommended",
-    "plugin:cypress/recommended"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",

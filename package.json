@@ -10,11 +10,13 @@
   "author": "Mark Naumenko",
   "license": "ISC",
   "devDependencies": {
-    "@cypress/xpath": "^2.0.3",
-    "cypress": "^12.5.1"
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint": "^8.34.0"
+
   },
   "dependencies": {
-    "eslint": "^8.34.0",
-    "eslint-plugin-cypress": "^2.12.1"
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.5.1"
   }
 }
