@@ -7,11 +7,20 @@ module.exports = defineConfig({
     baseUrl: "https://demo.1crmcloud.com",
     watchForFileChanges: false,
     scrollBehavior: "center",
+    setupNodeEvents(on) {
+      require("cypress-mochawesome-reporter/plugin")(on);
+    },
   },
   env: {
     login: "admin",
     password: "admin",
   },
   video: false,
-  reporter: "mochawesome",
+  reporter: "cypress-mochawesome-reporter",
+  reporterOptions: {
+    reportDir: "reports",
+    overwrite: false,
+    html: false,
+    json: true,
+  },
 });

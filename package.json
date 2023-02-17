@@ -4,16 +4,17 @@
   "description": "test task for reply canvas",
   "main": "index.js",
   "scripts": {
-    "open cypress": "npx cypress open",
-    "eslint-auto-fix": "eslint **/*.js --fix"
+    "open:cypress": "npx cypress open",
+    "eslint:fix": "eslint **/*.js --fix",
+    "run": "npx cypress run"
   },
   "author": "Mark Naumenko",
   "license": "ISC",
   "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.3.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "mochawesome": "^7.1.3"
+    "eslint-plugin-prettier": "^4.2.1"
   },
   "dependencies": {
     "@cypress/xpath": "^2.0.3",

@@ -2,7 +2,7 @@
 describe("Scenario 1 – Create contact", () => {
   // 1. Login
   //
-  it("Login", () => {
+  it("Login via UI", () => {
     cy.visit("/");
 
     cy.get("#login_user").type(Cypress.env("login"));
