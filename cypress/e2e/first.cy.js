@@ -1,4 +1,4 @@
-const constants = require('./../support/constants.js');
+const constants = require("./../support/constants.js");
 
 // Scenario 1 – Create contact:
 describe("Scenario 1 – Create contact", () => {
@@ -21,8 +21,8 @@ describe("Scenario 1 – Create contact", () => {
 
   context("API login", () => {
     let recordID = null;
-    const name = 'Name';
-    const surname = 'Surname';
+    const name = "Name";
+    const surname = "Surname";
 
     beforeEach(() => {
       cy.login();
@@ -68,9 +68,9 @@ describe("Scenario 1 – Create contact", () => {
     it("check contact", () => {
       cy.visit(constants.urls.contactsView);
 
-      cy.findByFilterText(name + ' ' + surname);
+      cy.findByFilterText(name + " " + surname);
 
-      cy.get("#_form_header > h3").contains(name + ' ' + surname);
+      cy.get("#_form_header > h3").contains(name + " " + surname);
       cy.get(".cell-business_role > .form-entry > .form-value").contains("CEO");
       cy.xpath('//p [contains( text(), "Category")]/parent::li').contains(
         "Customers, Suppliers"

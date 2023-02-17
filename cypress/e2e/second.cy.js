@@ -1,4 +1,4 @@
-const constants = require('./../support/constants.js');
+const constants = require("./../support/constants.js");
 
 // Scenario 2 – Run report:
 describe("Scenario 2 – Run report", () => {

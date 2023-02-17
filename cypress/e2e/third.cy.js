@@ -1,4 +1,4 @@
-const constants = require('./../support/constants.js');
+const constants = require("./../support/constants.js");
 
 // Scenario 3 – Remove events from activity log:
 describe("Scenario 3 – Remove events from activity log:", () => {
