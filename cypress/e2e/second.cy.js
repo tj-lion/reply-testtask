@@ -1,3 +1,5 @@
+const constants = require('./../support/constants.js');
+
 // Scenario 2 – Run report:
 describe("Scenario 2 – Run report", () => {
   it("check report generation", () => {
@@ -5,7 +7,7 @@ describe("Scenario 2 – Run report", () => {
     cy.login();
 
     // 2. Navigate to “Reports & Settings” -> “Reports”
-    cy.visit("/index.php?module=Reports&action=index");
+    cy.visit(constants.urls.reports);
 
     // 3. Find “Project Profitability” report
     cy.intercept({
@@ -27,7 +29,3 @@ describe("Scenario 2 – Run report", () => {
     cy.get("table.listView tbody").find("tr").its("length").should("least", 1);
   });
 });
-
-//TODO - check best practices
-//TODO - configurations via files
-//TODO - code reuse

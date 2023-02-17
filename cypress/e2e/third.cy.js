@@ -1,3 +1,5 @@
+const constants = require('./../support/constants.js');
+
 // Scenario 3 – Remove events from activity log:
 describe("Scenario 3 – Remove events from activity log:", () => {
   it("removing top three activities in the list", function () {
@@ -5,7 +7,7 @@ describe("Scenario 3 – Remove events from activity log:", () => {
     cy.login();
 
     // 2. Navigate to “Reports & Settings” -> “Activity log”
-    cy.visit("/index.php?module=ActivityLog&action=index");
+    cy.visit(constants.urls.activityLog);
 
     // remember number of activities before removing
     cy.get(
