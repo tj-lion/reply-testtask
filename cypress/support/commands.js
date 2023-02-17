@@ -4,8 +4,8 @@ Cypress.Commands.add("login", () => {
       method: "POST",
       url: "/json.php?action=login",
       body: {
-        username: "admin",
-        password: "admin",
+        username: Cypress.env("login"),
+        password: Cypress.env("password"),
       },
     }).then(({ body }) => {
       window.localStorage.setItem("PHPSESSID", body.json_session_id);

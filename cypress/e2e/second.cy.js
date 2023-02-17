@@ -1,6 +1,6 @@
 // Scenario 2 – Run report:
 describe("Scenario 2 – Run report", () => {
-  it("", () => {
+  it("check report generation", () => {
     // 1. Login
     cy.login();
 

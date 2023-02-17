@@ -8,4 +8,10 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     scrollBehavior: "center",
   },
+  env: {
+    login: "admin",
+    password: "admin",
+  },
+  video: false,
+  reporter: "mochawesome",
 });

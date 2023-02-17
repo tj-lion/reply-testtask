@@ -1,6 +1,6 @@
 // Scenario 3 – Remove events from activity log:
 describe("Scenario 3 – Remove events from activity log:", () => {
-  it("should ", () => {
+  it("removing top three activities in the list", function () {
     // 1. Login
     cy.login();
 
@@ -40,11 +40,11 @@ describe("Scenario 3 – Remove events from activity log:", () => {
     });
   });
 
-  it("should ", function () {
+  it("check if overall number of activities decreased by 3", function () {
     // 5. Verify that items were deleted
     cy.wrap(this.numberOfActivitiesNew).should(
       "eq",
-      this.numberOfActivities - 0
+      this.numberOfActivities - 3
     );
   });
 });
